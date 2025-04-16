@@ -11,9 +11,10 @@ It contains a list of video games with sales greater than 100,000 copies during 
 - Year - year of the game's release
 - Genre - genre of the game
 - Publisher - publisher of the game
-- NA_Sales - Sales in North America (in millions)
-- EU_Sales - Sales in Europe (in millions)
-- JP_Sales - Sales in Japan (in millions)
-- Other_Sales - Sales in the rest of the world (in millions)
-- Global_Sales - Total worldwide sales (NA_Sales + EU_Sales + JP_Sales + Other_Sales)
-and 
+- NA_Sales - sales in North America (in millions)
+- EU_Sales - sales in Europe (in millions)
+- JP_Sales - sales in Japan (in millions)
+- Other_Sales - sales in the rest of the world (in millions)
+- Global_Sales - sotal worldwide sales (NA_Sales + EU_Sales + JP_Sales + Other_Sales)
+  
+and 16323 rows. 
