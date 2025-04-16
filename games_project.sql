@@ -88,7 +88,13 @@ FROM sales_new
 WHERE sales_new.Ranking <= 10
 LIMIT 10;
 
--- Only 6/10.
+-- Only 7/10. Which are the new games that have made their way into the new list?
+
+SELECT Name 
+FROM (SELECT Name FROM sales_new WHERE Ranking <= 10) AS temp_table1
+EXCEPT
+SELECT Name
+FROM (SELECT Name FROM sales WHERE Ranking <= 10) AS temp_table2;
 
 -- Top 10 games per each genre
 
