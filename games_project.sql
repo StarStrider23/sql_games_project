@@ -1,3 +1,5 @@
+-- Projec by Alexsey Chernichenko
+
 USE games;
 
 SELECT *
