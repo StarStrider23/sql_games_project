@@ -10,8 +10,40 @@ SET SQL_SAFE_UPDATES = 0;
 DELETE FROM sales WHERE Year = 2017;
 DELETE FROM sales WHERE Year = 2020;
 
--- Many games were released on multiple platforms, let's sum all the sales from different platforms
+-- First, let's see if there are any duplicates or null values
+
+SELECT Ranking, Name, Platform, Year, Genre, Publisher,
+       NA_Sales, EU_Sales, JP_Sales, Other_Sales,
+       Global_Sales, COUNT(*)
+FROM sales
+GROUP BY Ranking, Name, Platform, Year, Genre, Publisher,
+       NA_Sales, EU_Sales, JP_Sales, Other_Sales,
+       Global_Sales
+HAVING COUNT(*) > 1;
+
+-- No duplicates. Any null values?
+
+SELECT Ranking, Name, Platform, Year, Genre, Publisher,
+       NA_Sales, EU_Sales, JP_Sales, Other_Sales,
+       Global_Sales
+FROM sales
+WHERE Ranking IS NULL OR NAME IS NULL OR Platform IS NULL OR
+      Year IS NULL OR Genre IS NULL OR Publisher IS NULL OR
+      NA_Sales IS NULL OR EU_Sales IS NULL OR JP_Sales IS NULL OR
+      Other_Sales IS NULL OR Global_Sales IS NULL; 
+
+-- No null values. 
+
+-- Many games were released on multiple platforms. First, let's see convince ourselves 
+-- that this is indeed true and then let's sum all the sales from different platforms
 -- and put it into a new table as it'll be useful later on. 
+
+SELECT Name, COUNT(Name)
+FROM sales
+GROUP BY Name
+HAVING COUNT(Name) > 1;
+
+-- Creating table
 
 CREATE TABLE sales_new AS
 WITH cte_total AS
