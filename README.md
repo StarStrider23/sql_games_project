@@ -4,7 +4,7 @@ Project by Alexsey Chernichenko
 
 The dataset used in the project is taken from https://www.kaggle.com/datasets/gregorut/videogamesales/data
 
-It contains a list of video games with sales greater than 100,000 copies during 1983-2016, 2017 and 2020 (However, years 2017 and 2020 are dropped since the data during these years seem incomplete). There are 16323 rows and 11 columns
+It contains a list of video games with sales greater than 100,000 copies during 1983-2016, 2017 and 2020 (However, years 2017 and 2020 are dropped since the data during these years seem to be incomplete). There are 16323 rows and 11 columns
 - Rank - ranking of overall sales
 - Name - the games name
 - Platform - platform of the games release (i.e. PC,PS4, etc.)
