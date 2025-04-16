@@ -29,4 +29,12 @@ The questions that are asked, studied and answered are the following:
 
 5. What are the most profitable genres worldwide? Regionally?
 
-6. What were the most profitable years of gaming? How did the sales change 
+6. What were the most profitable years of gaming? What is procentual growth/decrease of a year compared to the previous one?
+
+7. What are the most profitable platforms worldwide? Regionally?
+
+8. Who, amongst the publishers, earned the most?
+
+9. How did global sales number change from the period 1983-1999 to 2000-2016?
+
+10. How did Nintendo income vary throught the years 1983-2016? What was the year with lowest income? The highest? What is the average income during the period?
