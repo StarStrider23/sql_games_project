@@ -1,4 +1,4 @@
--- Projec by Alexsey Chernichenko
+-- Project by Alexsey Chernichenko
 
 USE games;
 
