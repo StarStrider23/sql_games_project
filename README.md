@@ -37,4 +37,4 @@ The questions that are asked, studied and answered are the following:
 
 9. How did global sales number change from the period 1983-1999 to 2000-2016?
 
-10. How did Nintendo income vary throught the years 1983-2016? What was the year with lowest income? The highest? What is the average income during the period?
+10. How did Nintendo income vary throughout the years 1983-2016? What was the year with lowest income? The highest? What is the average income during the period?
