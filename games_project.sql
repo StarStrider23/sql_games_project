@@ -27,9 +27,9 @@ SELECT Ranking, Name, Platform, Year, Genre, Publisher,
        NA_Sales, EU_Sales, JP_Sales, Other_Sales,
        Global_Sales
 FROM sales
-WHERE Ranking IS NULL OR NAME IS NULL OR Platform IS NULL OR
+WHERE Ranking IS NULL OR Name IS NULL OR Platform IS NULL OR
       Year IS NULL OR Genre IS NULL OR Publisher IS NULL OR
-      NA_Sales IS NULL OR EU_Sales IS NULL OR JP_Sales IS NULL OR
+	  NA_Sales IS NULL OR EU_Sales IS NULL OR JP_Sales IS NULL OR
       Other_Sales IS NULL OR Global_Sales IS NULL; 
 
 -- No null values. 
@@ -42,8 +42,6 @@ SELECT Name, COUNT(Name)
 FROM sales
 GROUP BY Name
 HAVING COUNT(Name) > 1;
-
--- Creating table
 
 CREATE TABLE sales_new AS
 WITH cte_total AS
@@ -88,7 +86,7 @@ FROM sales_new
 WHERE sales_new.Ranking <= 10
 LIMIT 10;
 
--- Only 7/10. Which are the new games that have made their way into the new list?
+-- Only 7/10. Which are the new games that make the new list?
 
 SELECT Name 
 FROM (SELECT Name FROM sales_new WHERE Ranking <= 10) AS temp_table1
@@ -262,17 +260,16 @@ FROM sales;
 
 -- Investigating Nintendo
 
-SELECT Publisher, Year, 
-ROUND(SUM(Global_Sales),2) AS earned_year, 
-(SELECT ROUND(AVG(temp_table.avg_earned),2)
-	FROM (SELECT SUM(Global_Sales) AS avg_earned
-		  FROM sales
-		  WHERE Publisher = 'Nintendo'
-		  GROUP BY Year) AS temp_table) AS avg_earned
-FROM sales
-WHERE Publisher = 'Nintendo'
-GROUP BY Publisher, Year
-ORDER BY earned_year DESC;
+WITH cte_nintendo AS (
+	SELECT DISTINCT Year, Publisher, SUM(Global_Sales) OVER(PARTITION BY Year) AS sum_year
+    FROM sales
+    WHERE Publisher = 'Nintendo'
+)
+SELECT Year, ROUND(sum_year ,2) AS sum_year, 
+       ROUND((sum_year - LAG(sum_year) OVER())/LAG(sum_year) OVER() *100,2) 
+       AS procent_difference
+FROM cte_nintendo
+ORDER BY Year ASC; 
 
 -- Average, minimum and maximum 
 
