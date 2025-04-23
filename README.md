@@ -55,7 +55,7 @@ However, some games were released to different platforms and this is listed as d
 
 <img width="429" alt="Снимок экрана 2025-04-23 в 19 40 46" src="https://github.com/user-attachments/assets/9b5c797f-1085-4a7a-b879-041455d7c9d5" />
 
-Clearly, the top 10s look different, even though the majority of the games (7/10 to be more specific) are still on the new list. But notice that Grand Theft Auto V, which was only on the 13th spot (the PS3 version), has now overtaken the 2nd place! This is due to the fact that it was released on 5 platforms and sold out pretty good on all of them. 
+The old list is on the left and the new one is on the right. Clearly, the top 10s look different, even though the majority of the games (7/10 to be more specific) are still on the new list. But notice that Grand Theft Auto V, which was only on the 13th spot (the PS3 version), has now overtaken the 2nd place! This is due to the fact that it was released on 5 platforms and sold out pretty good on all of them. 
 
 ### 4. 
 
