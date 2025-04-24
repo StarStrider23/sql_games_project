@@ -104,7 +104,7 @@ FROM sales_new
 )
 SELECT row_num, Name, genre, total_sales
 FROM cte_top10 
-WHERE row_num <= 10;
+WHERE row_num <= 5;
 
 -- Top 5 games sold per genre per region (NA, EU, JP and Other)
 
@@ -195,6 +195,20 @@ SELECT Year, ROUND(sum_year ,2) AS sum_year,
 FROM cte_procent
 ORDER BY Year ASC;
 
+-- Most profitable year is 2008. What were the games that released that year?
+
+SELECT Ranking, Name, year, Genre, total_sales
+FROM (WITH cte_total AS
+	(SELECT Name, year, Genre,
+     ROUND(SUM(Global_Sales),4) AS total_sales
+     FROM sales
+     GROUP BY Name, year, Genre)
+SELECT ROW_NUMBER() OVER() AS Ranking, Name, year, 
+Genre, total_sales
+FROM cte_total
+ORDER BY total_sales DESC) AS temp_table
+WHERE year = 2006;
+
 -- The most profitable platforms
 
 SELECT Platform, ROUND(SUM(Global_Sales),2) AS total_earned, 
@@ -206,10 +220,10 @@ ORDER BY total_earned DESC;
 
 -- Top platforms per region (NA, EU, JP and Other)
 
-SELECT tt1.row_num, tt1.platform, tt1.total_earned_NA,
-       tt2.row_num, tt2.platform, tt2.total_earned_EU,
-       tt3.row_num, tt3.platform, tt3.total_earned_JP,
-       tt4.row_num, tt4.platform, tt4.total_earned_other
+SELECT temp_table1.row_num, temp_table1.platform, temp_table1.total_earned_NA,
+       temp_table2.row_num, temp_table2.platform, temp_table2.total_earned_EU,
+       temp_table3.row_num, temp_table3.platform, temp_table3.total_earned_JP,
+       temp_table4.row_num, temp_table4.platform, temp_table4.total_earned_other
 FROM (SELECT platform, ROUND(SUM(NA_Sales),2) AS total_earned_NA, 
        ROW_NUMBER() OVER(ORDER BY SUM(NA_Sales) DESC) AS row_num
 FROM sales
@@ -221,38 +235,39 @@ JOIN
 FROM sales
 GROUP BY platform
 ORDER BY total_earned_EU DESC) AS tt2
-ON tt1.row_num = tt2.row_num
+ON temp_table1.row_num = temp_table2.row_num
 JOIN
 (SELECT platform, ROUND(SUM(JP_Sales),2) AS total_earned_JP, 
        ROW_NUMBER() OVER(ORDER BY SUM(JP_Sales) DESC) AS row_num
 FROM sales
 GROUP BY platform
 ORDER BY total_earned_JP DESC) AS tt3
-ON tt2.row_num = tt3.row_num
+ON temp_table2.row_num = temp_table3.row_num
 JOIN
 (SELECT platform, ROUND(SUM(Other_Sales),2) AS total_earned_other, 
        ROW_NUMBER() OVER(ORDER BY SUM(Other_Sales) DESC) AS row_num
 FROM sales
 GROUP BY platform
 ORDER BY total_earned_other DESC) AS tt4
-ON tt3.row_num = tt4.row_num
-WHERE tt1.row_num <= 5;
+ON temp_table3.row_num = temp_table4.row_num
+WHERE temp_table1.row_num <= 5;
 
 -- Publisher who earned the most money?
 
-SELECT sales.Publisher, SUM(Global_Sales) AS total_earned
+SELECT sales.Publisher, ROUND(SUM(Global_Sales),2) AS total_earned
 FROM sales
 GROUP BY sales.Publisher
-ORDER BY total_earned DESC;
+ORDER BY total_earned DESC
+LIMIT 10;
 
 -- Difference in earned money between two 17-year periods: 1983-1999 and 2000-2016
 
 SELECT
-DISTINCT (SELECT SUM(Global_Sales) 
+DISTINCT (SELECT ROUND(SUM(Global_Sales),2)
           FROM sales 
           WHERE Year < 1999)
           AS sales_1983_1999, 
-		 (SELECT SUM(Global_Sales) 
+		 (SELECT ROUND(SUM(Global_Sales),2)
           FROM sales 
           WHERE Year > 1999) 
           AS sales_2000_2016
@@ -265,7 +280,7 @@ WITH cte_nintendo AS (
     FROM sales
     WHERE Publisher = 'Nintendo'
 )
-SELECT Year, ROUND(sum_year ,2) AS sum_year, 
+SELECT Publisher, Year, ROUND(sum_year ,2) AS sum_year, 
        ROUND((sum_year - LAG(sum_year) OVER())/LAG(sum_year) OVER() *100,2) 
        AS procent_difference
 FROM cte_nintendo
@@ -279,7 +294,7 @@ WITH cte_temp AS (
 	ROUND(MIN(temp_table.avg_earned),2) AS avg_year
 	FROM (SELECT SUM(Global_Sales) AS avg_earned
 		  FROM sales
-		  WHERE Publisher = 'Nintendo'
+		  WHERE Publisher = 'Nintendo' AND year <> 2016
 		  GROUP BY Year) AS temp_table
 )
 SELECT *
