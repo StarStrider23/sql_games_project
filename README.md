@@ -85,5 +85,15 @@ Also, it is quite amusing that the fraph above looks like a Gaussian distributio
 
 ### 7. 
 
+The most profitable platforms are:
 
+<img width="692" alt="Снимок экрана 2025-04-23 в 21 35 37" src="https://github.com/user-attachments/assets/5588262d-b972-41b2-ab02-d236c9f98726" />
+
+One can also look up the top games for the top 6 platforms as they stick out the most. 
+
+<img width="786" alt="Снимок экрана 2025-04-24 в 10 11 58" src="https://github.com/user-attachments/assets/02c8ce9f-7e49-4d22-ac91-57efe110af34" />
+
+Notice that the 3 Wii games contribute to 16.3% combined of the total games sold on Wii. 
+
+### 8. 
 
