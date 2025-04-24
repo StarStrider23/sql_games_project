@@ -107,8 +107,12 @@ Studying question #6 one couldn't but notice how the total sales changed from 80
 
 <img width="204" alt="Снимок экрана 2025-04-24 в 10 27 09" src="https://github.com/user-attachments/assets/13665c41-6a65-4fef-85fc-34c109c4d122" />
 
-This shows a huge difference between the 2 intervals. Clearly, the gaming industry gained a lot more profit in the 2000s. The profit made during that interval is 5 times larger.
+This shows a huge difference between the 2 intervals. Clearly, the gaming industry gained a lot more profit in the 2000s. The profit made during that interval is 5 times larger. 
 
 ### 10.
 
+As Nintendo has been in the industry for a very long time, let's investigate it. Here are the companys income each year and procentual growth/decrease.
 
+<img width="265" alt="Снимок экрана 2025-04-24 в 10 49 59" src="https://github.com/user-attachments/assets/5d035138-9c1c-44d9-8fe5-d4630ce6c06b" />
+
+The year when the company earned the most was 2006, when such games as Wii Sports (82.74 million), New Super Mario Bros. (30.01 million) and Wii Play (29.02 million) were released. Only the Wii Sports itself comprises 40% of the games sold that year, which is a lot! And the 3 games made up for 69% procent of the total copies that were sold that year. On the other hand, the worst year for Nintendo is said to be 2016, but this is probably not true and the data from this year is incomplete. The true number is 10.96 million copies sold which happened in 1983. On average, Nintendo sold almost 54 million copies each year which makes them one the most (if not the most) successful publishers. 
