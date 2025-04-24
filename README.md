@@ -75,9 +75,15 @@ Once again, for the regional results, please run the code yourself.
 
 ### 6. 
 
-One can clearly see that the most profitable years of gaming are centered around the year 2008. 
+Here are the most profitable years of gaming and procent difference. One can clearly see that the most profitable year of gaming was the year 2008 and other years are pretty much centered around it. 
 
 <img width="944" alt="Снимок экрана 2025-04-23 в 21 15 45" src="https://github.com/user-attachments/assets/a730ff0a-2665-4a67-b6c5-1aaac7b71e29" />
 
-Interestingly enough, there are only 3 games from year 2008 in the top 50: Mario Kart Wii (35.82 million copies sold), Grand Theft Auto IV (22.47 million) and Call of Duty: World at War (15.87 million). These account for 
+Interestingly enough, there are only 3 games from year 2008 in the top 50: Mario Kart Wii (35.82 million copies sold), Grand Theft Auto IV (22.47 million) and Call of Duty: World at War (15.87 million). These account for 5.3%, 3.3% and 2.3% respectively from the total sales that year. So these games together contribute to a total of 10.9% from the total sales from the year 2008.
+
+Also, it is quite amusing that the fraph above looks like a Gaussian distribution with the mean being the year 2008.
+
+### 7. 
+
+
 
