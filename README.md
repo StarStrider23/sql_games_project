@@ -55,11 +55,29 @@ However, some games were released to different platforms and this is listed as d
 
 <img width="429" alt="Снимок экрана 2025-04-23 в 19 40 46" src="https://github.com/user-attachments/assets/9b5c797f-1085-4a7a-b879-041455d7c9d5" />
 
-The old list is on the left and the new one is on the right. Clearly, the top 10s look different, even though the majority of the games (7/10 to be more specific) are still on the new list. But notice that Grand Theft Auto V, which was only on the 13th spot (the PS3 version), has now overtaken the 2nd place! This is due to the fact that it was released on 5 platforms and sold out pretty good on all of them. 
+The old list is on the left and the new one is on the right. Clearly, the top 10s look different, even though the majority of the games (7/10 to be more specific) are still on the new list. But notice that Grand Theft Auto V, which was only on the 13th spot before (the PS3 version), has now overtaken the 2nd place! This is due to the fact that it was released on 5 platforms and sold out pretty good on all of them. 
 
 ### 4. 
 
 Here, I've chosen to use Tableau as the list is long and it is much easier to comprehend it visually. The data for the world is the following.
 
 <img width="1269" alt="Снимок экрана 2025-04-23 в 20 09 21" src="https://github.com/user-attachments/assets/ddd1f544-c140-44b5-96a0-f75f2e5eb365" />
+
+The data for different regions (NA, EU, JP and Other) looks similar and the reader is advised to run the code on one's own as those lists are quite lengthy.
+
+### 5. 
+
+Similarly, below are the most profitable genres in the world. 
+
+<img width="1079" alt="Снимок экрана 2025-04-23 в 20 59 02" src="https://github.com/user-attachments/assets/3a297749-0718-4b1d-881c-396a395bbd57" />
+
+Once again, for the regional results, please run the code yourself. 
+
+### 6. 
+
+One can clearly see that the most profitable years of gaming are centered around the year 2008. 
+
+<img width="944" alt="Снимок экрана 2025-04-23 в 21 15 45" src="https://github.com/user-attachments/assets/a730ff0a-2665-4a67-b6c5-1aaac7b71e29" />
+
+Interestingly enough, there are only 3 games from year 2008 in the top 50: Mario Kart Wii (35.82 million copies sold), Grand Theft Auto IV (22.47 million) and Call of Duty: World at War (15.87 million). These account for 
 
