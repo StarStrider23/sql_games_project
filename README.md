@@ -103,7 +103,7 @@ There are lots of publishers so let's limit ourselves to 10.
 
 ### 9. 
 
-Studying question #6 one couldn't but notice how the total sales changed from 80s-90s to 2000s and 2010s. Let's take 2 same intervals (1983-1999 and 2000-2016) and compare them. 
+Studying question #6 one couldn't but notice how the total sales changed drastically from 80s-90s to 2000s and 2010s. Let's take 2 same intervals (1983-1999 and 2000-2016) and compare them. 
 
 <img width="204" alt="Снимок экрана 2025-04-24 в 10 27 09" src="https://github.com/user-attachments/assets/13665c41-6a65-4fef-85fc-34c109c4d122" />
 
