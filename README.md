@@ -1,4 +1,4 @@
-# Analysis of the game sales
+# Analysis of game sales (1983 - 2016)
 
 Project by Alexsey Chernichenko
 
